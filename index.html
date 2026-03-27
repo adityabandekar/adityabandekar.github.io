@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC316 A3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+<div class="dashboard-container">
+    <h1>Who is most responsible for the climate crisis?</h1>
+
+
+    <div class="chart-card">
+        <p>In Assignment 2, I created a zine which asked this question. I showed multiple visualizations which argue different points of views.  Here I extend those visualizations to be interactive.</p>
+        <p>One question we can ask is which countries pollute the most CO2 by sheer number.</p>
+        <h3>CO2 emissions by country</h3>
+        <p class="instruction">Drag the timeline below to zoom. Double-click to reset.</p>
+        <svg id="stacked-svg" width="940" height="600"></svg>
+        <p>We see that China, the United States, and India produce the most CO2. Furthermore, 6 of the top 10 countries are from the Asian continent. On first glance, this implies that these countries are most the responsible countries in pollution. </p>
+        <p>Let's now show this on a map to make it clear which countries pollute the most. </p>
+
+        <h3>CO2 emissions by country</h3>
+        <div class="controls">
+            <label for="yearSlider">Select Year: <span id="yearLabel">2022</span></label><br>
+            <input type="range" id="yearSlider" min="1950" max="2022" value="2022" step="1">
+        </div>
+        <svg id="map-svg" width="940" height="500"></svg>
+
+        <p>We see that larger countries pollute the most. However, this feels like an unfair comparison because each country has a different population. For example European pollution is distributed among multiple smaller countries, which make their impact seem smaller.</p>
+        <p>So maybe instead we should ask which countries pollute the most per capita?</p>
+
+        <h3>CO2 emissions by country per capita</h3>
+        <div class="controls">
+            <label for="yearSlider2">Select Year: <span id="yearLabel2">2022</span></label><br>
+            <input type="range" id="yearSlider2" min="1950" max="2022" value="2022" step="1">
+        </div>
+        <svg id="map-svg2" width="940" height="500"></svg>
+
+        <p>Now we see that China and India produce less CO2 emissions per capita than a lot of other countries. Here it seems that most developed countries are producing similar amounts of CO2 emissions.</p>
+
+        <p>European countries produce less CO2 emissions per capita than USA and China and are declining in emissions per capita. Next, a few nations in the middle east which have a lot of oil resources are producing a lot of CO2 emissions per capita.</p>
+        <p>In conclusion, based on how we visualize the data, we can draw different conclusions.</p>
+    </div>
+
+
+</div>
+
+<div id="tooltip" class="tooltip"></div>
+
+<script src="vis1.js"></script>
+<script src="vis2.js"></script>
+<script src="vis3.js"></script>
+
+</body>
+</html>

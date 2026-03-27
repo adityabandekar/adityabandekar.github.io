@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    font-size: 14pt
+}
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 { text-align: center; color: #1a1a1a; }
+h2 { color: #333; margin-top: 0; }
+
+.chart-card {
+    background: white;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.controls { margin-bottom: 20px; text-align: center; }
+#yearSlider { width: 50%; cursor: pointer; }
+#yearSlider2 { width: 50%; cursor: pointer; }
+
+
+.instruction {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.country { stroke: #fff; stroke-width: 0.5px; transition: fill 0.3s; }
+.country:hover { stroke: #333; stroke-width: 1.5px; cursor: crosshair; }
+
+.brush .selection { fill: #69b3a2; fill-opacity: 0.3; stroke: #fff; }
+.layer { transition: fill-opacity 0.2s; }
+.layer:hover { fill-opacity: 0.7; }
+
+.sparkline-container {
+    margin-top: 10px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
+
+.spark-years {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #aaa;
+    margin-top: 2px;
+}
+
+.sparkline-path {
+    fill: none;
+    stroke: #ff7f0e;
+    stroke-width: 1.5px;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(25, 25, 25, 0.95);
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 13px;
+    opacity: 0;
+    z-index: 1000;
+    min-width: 180px;
+}
+
+.line {
+    transition: opacity 0.2s ease, stroke-width 0.2s ease;
+    cursor: pointer;
+}
+
+.line-legend text {
+    fill: #333;
+    font-size: 13px;
+}
